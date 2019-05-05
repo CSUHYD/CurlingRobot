@@ -2,12 +2,12 @@
 Curling Robot @ TongYe
 
 ## Choose RL Methods：
-### Continue Action Space :
+### Continuous Action Space :
 - Policy gradient
 - DDPG
 - A3C
 - PPO
-### 离散动作 (动作是一个离散值, 比如向前,向后走)
+### Discrete Action Space:
 - Q-learning
 - DQN
 - A3C
