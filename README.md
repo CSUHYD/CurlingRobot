@@ -1,6 +1,18 @@
 # CurlingRobot
 Curling Robot @ TongYe
 
+## Choose RL Methods：
+### Continue Action Space :
+- Policy gradient
+- DDPG
+- A3C
+- PPO
+### 离散动作 (动作是一个离散值, 比如向前,向后走)
+- Q-learning
+- DQN
+- A3C
+- PPO
+
 ## reference
 **[1]** https://blog.csdn.net/kenneth_yu/article/details/78478356 DDPG
 
