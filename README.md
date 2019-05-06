@@ -18,12 +18,14 @@ Curling Robot @ TongYe
 
 **[2]** https://www.ibm.com/developerworks/cn/analytics/library/ba-lo-deep-introduce-policy-gradient/index.html Policy Gradient (PG)
 
-**[3]** https://blog.csdn.net/ikerpeng/article/details/78613800 Policy Gradient 理论推导
+**[6]** https://medium.com/@jonathan_hui/rl-policy-gradients-explained-9b13b688b146 Jonathan Hui, Medium Blog 最好的blog
 
 **[4]** https://morvanzhou.github.io/tutorials/machine-learning/reinforcement-learning/5-1-policy-gradient-softmax1/ 莫烦
 
 **[5]** https://www.bilibili.com/video/av35757082/?p=28 李宏毅深度学习视频
 
-**李宏毅牛逼**
+
+
+**ps：李宏毅牛逼，需要过一遍讲义**
 
 
