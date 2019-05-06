@@ -22,4 +22,8 @@ Curling Robot @ TongYe
 
 **[4]** https://morvanzhou.github.io/tutorials/machine-learning/reinforcement-learning/5-1-policy-gradient-softmax1/ 莫烦
 
+**[5]** https://www.bilibili.com/video/av35757082/?p=28 李宏毅深度学习视频
+
+**李宏毅牛逼**
+
 
