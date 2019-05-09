@@ -24,7 +24,7 @@ Curling Robot @ TongYe
 
 **[5]** https://www.bilibili.com/video/av35757082/?p=28 李宏毅深度学习视频
 
-
+**[6]** https://blog.csdn.net/LagrangeSK/article/details/81010195 强化学习教程Blog，讲的很详细，结合大神的PPTT
 
 **ps：李宏毅牛逼，需要过一遍讲义**
 
