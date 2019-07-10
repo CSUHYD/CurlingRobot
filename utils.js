@@ -61,3 +61,24 @@ export function gaussian(mean, stdev) {
         return -retval;
     }
 }
+
+export function set_nan(arr, range, loc, reward)  {
+    let length = arr.length;
+    let start = loc - range;
+    let end = loc + range;
+
+    if (loc-range < 0 ) {
+        start = 0;
+    }
+
+    if (loc+range > length ) {
+        end = length;
+    }
+
+    console.log(start, end);
+    for (let i=start; i<=end; i++) {
+        arr[i] = reward;
+    }
+
+    return arr;
+}

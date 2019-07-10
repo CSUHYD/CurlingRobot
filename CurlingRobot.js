@@ -1,10 +1,11 @@
 import {index_of_max} from './utils.js';
 import {random_choose} from "./utils.js";
 import {gaussian} from "./utils.js";
+import {set_nan} from "./utils.js";
 
 class ActionSpace {
     // Action space is the list of [v, t]
-    constructor(vmin=50, vmax=150, tmin=50, tmax=150, clip=5) {
+    constructor(vmin=50, vmax=200, tmin=50, tmax=150, clip=6) {
         this.vspace = [];
         this.tspace = [];
         this.action_space = [];
@@ -19,6 +20,11 @@ class ActionSpace {
                 this.action_space.push([this.vspace[i], this.tspace[j]]);
             }
         }
+
+        // 按v+t的大小排序
+        this.action_space.sort(function(a,b){
+            return (a[0]+a[1]) - (b[0] + b[1]);
+        });
     }
 
 
@@ -135,7 +141,19 @@ class QLearningTable {
         } else {
             q_target = r  // next state is terminal
         }
-        this.q_table[s][a] += this.lr * (q_target - q_predict)  // update
+        let q_value = this.lr * (q_target - q_predict);
+        this.q_table[s][a] +=   q_value;  // update
+        // 把奖励值小的Q自动赋值为小的奖励
+        if (r === 1) {
+            set_nan(this.q_table[s], 3, a, q_value);
+        }
+        if (r === 2) {
+            set_nan(this.q_table[s], 2, a, q_value);
+        }
+        if (r === 3) {
+            set_nan(this.q_table[s], 1, a, q_value);
+        }
+
     }
 
 }
@@ -143,8 +161,8 @@ class QLearningTable {
 
 function train(max_episode = 5) {
     const env = new CurlingEnv();
-    const RL = new QLearningTable(5,5);
     let a = new ActionSpace();
+    const RL = new QLearningTable(5, a.action_space.length);
     RL.init_q_table();
     console.log('Begin!');
 
